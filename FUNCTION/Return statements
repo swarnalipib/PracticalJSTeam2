@@ -1,0 +1,62 @@
+//return statement-Stops execution, returns the evaluated result
+
+//Example 1 - with return statement
+function subtract(a, b) {
+  return a - b; // Sends the calculation result back
+}
+
+const result = subtract(10, 6); 
+console.log(result);
+
+
+//Example 2 - without return statement
+
+function add(a, b) {
+  return a + b; // undefined
+
+}
+console.log(add(4,3));
+//const res = add(10, 6); 
+//console.log(res);
+
+//example 3 perimeter of rectangle 
+
+function rectangle(length,breadth)
+{
+  return 2*length+2*breadth;
+}
+let perimeter = rectangle(10,20);
+console.log(perimeter);
+
+//Example 4 using function return statement to check age validation
+
+function checkAge(age) {
+  if (age > 18) {
+    return "valid age to vote"; 
+  }
+  else{
+  return "Invalid age to vote"; 
+}
+}
+console.log(checkAge(24));
+
+//Example 5 using function return object 
+
+function employeedetails()
+{
+  return {
+    name:"swarnalipi",
+    role:"QA"
+  };
+}
+const employee= employeedetails();
+console.log(employee.name);
+console.log(employee.role);
+
+//Example using function return an array
+
+function fruits()
+{
+  return ["apple","cherry","grapes"];
+}
+console.log(fruits());
