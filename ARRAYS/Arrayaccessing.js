@@ -80,7 +80,3 @@ const employees = [{ name: 'Alice',role:"Developer" }, { name: 'Bob',role:"QA" }
 console.log(employees[0].name);
 console.log(employees[0].role);
 console.log(employees[1].name);
-console.log(employees[1].role);
-console.log(employees[1].role);
-console.log(employees[1].role);
-console.log(employees[1].role);

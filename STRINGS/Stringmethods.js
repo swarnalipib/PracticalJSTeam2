@@ -1,4 +1,5 @@
-//STRING METHODS 
+//STRING METHODS In JavaScript, strings are immutable. This means that once a string is created, its value cannot be modified.
+//  Any property or method that manipulates a string will always return a new value (either a new string, a number, or an array) rather than changing the original string variable
 
 //charAt()-returns the character at a specified index (position) in a string
 
@@ -67,15 +68,18 @@ console.log(s1.lastIndexOf(70));//4
 console.log(s1.lastIndexOf(30));//8
 console.log(s1.lastIndexOf("30"));//-1
 console.log(s1.lastIndexOf("lipi"));//If string not defined -1
-console.log(s1.lastIndexOf(70,3));
-console.log(s1.lastIndexOf(20,4));
+console.log(s1.lastIndexOf(70,3));//2
+console.log(s1.lastIndexOf(20,4));//
+console.log(s1.lastIndexOf(50,4));//-1 as from index 4 backward no 50 is found so -1
+console.log(s1.lastIndexOf(20,8));//5
 console.log("*************************")
 
 let s2="She is be with be us" //"S h e   i s   b e   w   i  t   h    b  e     u  s"
-                                 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+                            //   0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
 
 console.log(s2.lastIndexOf("be"));//15
 console.log(s2.lastIndexOf("is"));//4
+console.log(s2.lastIndexOf("e"));//16
 
 //substring()-- method extracts characters from a string between two specified indices and returns a brand-new string without modifying the original one
 
@@ -101,3 +105,34 @@ console.log(s3.substr(4,1));
 console.log(s3.substr(1,-4));//empty string as end index is counting no 
 console.log(s3.substr(4)); //startindex till end
 console.log(s3.substr(-4));//startindex till end
+console.log("****************************")
+
+//split() -splits a string into an array of substrings.
+let s5="SWARNALIPI JAVA LEARNING";
+console.log(s5.split(" "));//"" is the separator the string is split between words
+console.log(s5.split("SWARNALIPI"));// query
+console.log(s5.split("",3));//3 count from start then split letters
+console.log(s5.split(4,""))//empty array
+console.log(s5.split("",0))//empty array
+console.log(s5.split("",-4))//whole string is split in letters
+console.log(s5.split("",null))//empty array
+console.log(s5.split("",10))
+console.log("Testing".split("",-2))//it should return empty array but it returns whole string
+
+//trim() removes whitespace from both sides of a string.
+let s6="      JAVA       ";
+console.log(s6);
+console.log(s6.trim());
+let s7="       DEMO   IS   THE   BEST    ";
+console.log(s7.trim());//it never remove the space between the words , it remove space from sides
+console.log(s7.trim(null));//does not accept any parameters.it returns same result
+console.log(s7.trim(8));//does not accept any parameters.it returns same result
+
+//trimStart() -removes whitespace only from the start of a string.
+console.log(s7.trimStart());//removes whitespace only from the start of a string.
+console.log(s7.trimStart(5));//same result no change it doesn't accept argument
+
+//trimEnd() -removes whitespace only from the end of a string.
+console.log(s7.trimEnd());//removes whitespace only from the start of a string.
+console.log(s7.trimEnd(5));//same result no change it doesn't accept argument
+
