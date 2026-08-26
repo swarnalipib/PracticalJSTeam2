@@ -161,4 +161,34 @@ const text3 = "JavaScript";
 console.log(text3.slice(0, 4));   // "Java"
 console.log(text3.slice(-5));// cript
 
+//immutability concept for string 
+//Strings are immutable cannot change the original string
+
+//Example 1
+let j = "Java";
+
+j[0] = "H"; // Attempting to mutate the first character
+
+console.log(j); // Output: "Java" (The string did NOT change!)
+
+
+//Example 2
+let originalString = "javascript";
+let newString = originalString.toUpperCase();//trying to change the original to uppercase
+console.log(newString);
+console.log(originalString);
+
+//Example 3 Original strings can be modified by reassignment 
+
+let oStr="original message";
+let newStr =  oStr;//both point to memmory containing "original message"
+oStr = oStr + " is changed";// reassignment 
+console.log(oStr);
+console.log(newStr)
+
+
+
+
+
+
 
