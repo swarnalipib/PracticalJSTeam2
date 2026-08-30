@@ -220,7 +220,8 @@ console.log("5"+NaN+0+"5",typeof("5"+NaN+0+"5"));//5NaN05,string
 console.log(5+null+0+"5",typeof("5"+null+0+"5"));//55,string
 console.log(true+null+"5"+8,typeof(true+null+"5"+8));//158, string
 console.log("5"+null+10+true+20,typeof(true+null+"5"+8));//5null10true20 string
-console.log(null+10+true+"20",typeof(true+null+"5"+8));//1120 string
+console.log(null+10+true+"20",typeof(null+10+true+"20"));//1120 string
+console.log(true-1+2 * "5"+8);//18,number
 
 
 //using unary +operator
@@ -229,3 +230,13 @@ let strV = "42";
 let v = +strV; // Converts "42" to the number 42 using unary operator
 
 console.log(v + 8); // Output: 50 (Instead of "428")
+
+//5. Converting  dates to string
+
+const date = new Date();
+console.log(date.toString(),typeof(date.toString())); 
+console.log(date.toDateString(),typeof(date.toDateString())); 
+console.log(date.toTimeString(),typeof(date.toTimeString()));
+console.log(date.toLocaleDateString(),typeof(date.toLocaleDateString()));
+console.log(date.toISOString(),typeof(date.toISOString()));
+console.log(date.toUTCString(),typeof(date.toUTCString()));
