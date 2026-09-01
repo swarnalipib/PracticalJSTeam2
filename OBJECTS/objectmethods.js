@@ -41,6 +41,21 @@ console.log(Object.keys(person));
 
 console.log(Object.values(person));
 
-//Object.entries(obj)->Returns an array of key-value pairs
+//Object.entries(obj)->Returns an nested array of  arrays ,each containing of key-value pairs
 
 console.log(Object.entries(person));
+
+//object.assign--used to copy all enumerable own properties from one or more source objects to a target object
+//properties from later objects overwrite earlier ones.
+
+const person1 = { //Target object
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+const person2 = {firstName: "swarnalipi",lastName: "behera"}; //source object
+
+const p= Object.assign(person1, person2);
+console.log(p);

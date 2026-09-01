@@ -12,9 +12,14 @@ const person ={
   age: 36,
   job: "IT",
   phno: 9999955555,
-  nationality:"indian"
+  nationality:"indian",
+  k1:56
+
 };
 
+const obj2 = "k1";
+console.log(person[obj2]);
+console.log(person.k1);
 console.log(person.firstName);
 console.log(person.lastName);
 console.log(person.age);
