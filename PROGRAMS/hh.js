@@ -28,3 +28,27 @@ function findNLargest(arr, n) {
 const numbers = [3, 10, 4, 1, 8, 9, 2];
 const N = 3;
 console.log(findNLargest(numbers, N)); // Output: [8, 9, 10]
+
+//Example reverse a string
+
+function reverseString(str){
+    let res = "";
+    let i = findLength(str)-1;
+
+    while(i == 0){
+        res = res + str[i];
+        i--;
+    }
+    return res;
+}
+
+function findLength(str){
+    let count=0;
+
+    for (let x of str){
+        count++;
+    }
+    return count;
+}
+
+console.log(reverseString("java"));

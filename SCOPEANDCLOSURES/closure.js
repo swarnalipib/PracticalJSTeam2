@@ -102,3 +102,7 @@ const sum3 = sum2(2);
 const sum4 = sum3(3);
 const result = sum4(4);
 console.log(result); //20
+
+// let res =sum()()()();
+// console.log(res);
+
