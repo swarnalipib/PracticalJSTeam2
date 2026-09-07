@@ -6,7 +6,7 @@ function  countVowels(str)
 
     for (let x of str)
     {
-        if(x =='a'|| x =='e'|| x =='i'|| x =='o'||x =='u')
+        if(x =='a'|| x =='e'|| x =='i'|| x =='o'||x =='u'||x =='A'|| x =='E'|| x =='I'|| x =='O'||x =='U')
         {
             count++;
         }
@@ -14,7 +14,7 @@ function  countVowels(str)
 return count;
 }
 
-console.log(countVowels("javascript"));
+console.log(countVowels("jAvAscript"));
 console.log(countVowels("Swarnalipi"));
 
 //Example 2 count a particular characters
@@ -79,4 +79,14 @@ return true
 
 console.log(compareStrings("swarna","swarna"));
 console.log(compareStrings("swarna","java"));
+
+const n = 5;
+
+for (let i = 1; i <= n; i++) {
+  console.log(' '.repeat(n - i) + '*'.repeat(2 * i - 1)); // Upper Pyramid
+}
+
+for (let i = n - 1; i >= 1; i--) {
+  console.log(' '.repeat(n - i) + '*'.repeat(2 * i - 1)); // Lower Inverted Pyramid
+}
 

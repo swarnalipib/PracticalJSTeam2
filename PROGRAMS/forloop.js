@@ -84,7 +84,7 @@ for (let i = 1; i <= 5; i++) {
     console.log(row); 
 }
 
-//Example Print A Ab ABC ..
+//Example Print A AB ABC ..
 
 
 for (let i = 1; i <= 5; i++) { 
@@ -107,3 +107,5 @@ for (let i = 5; i >= 1; i--) {
     } 
     console.log(row); 
 }
+
+//Example print 
