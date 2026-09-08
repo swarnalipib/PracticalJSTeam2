@@ -243,25 +243,116 @@ downloadFile("https://example.com")
 
   //to do promise.All,Promise.race
 
-  //Example 12- using promise.All
+  //Example 12- using promise.All -Promise.all() takes an array of promises and returns a single promise that resolves into an array of results once all input promises successfully complete
+// if even a single promise rejects (fails), the entire operation aborts immediately and throws an error
 
-  function  task(name,time){
-    return new Promise(resolve => {
-        setTimeout(() => {
-     console.log(name);
-     resolve();
-        },time)
+
+const promise1 = Promise.resolve(10);
+
+const promise2 = new Promise((resolve) => {
+  setTimeout(() => resolve(20), 1000);
+});
+
+const promise3 = Promise.resolve(30);
+
+Promise.all([promise1, promise2, promise3])
+  .then((results) => {
+    console.log(results);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
+//Example 13
+const p1 = Promise.resolve(50);
+const p2 = 200
+const p3 = new Promise(function (resolve, reject) {
+    setTimeout(resolve, 100, 'geek');
+});
+
+Promise.all([p1, p2, p3]).then(function (values) {
+    console.log(values);
+});
+
+//Example 14 -Using Timers with Different Promises
+
+let pro1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Resolved First after 1 second");
+    }, 1000);
+});
+
+let pro2  = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Resolved First after 2 seconds");
+    }, 2000);
+});
+
+let pro3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Resolved First after 3 seconds");
+    }, 3000);
+});
+
+try {
+    let result = Promise.all([pro1 , pro2 , pro3 ]);
+    result.then((data) => {
+         console.log(data);
     });
-}
+} catch (error) {
+    console.log(error);
+};
 
-async function test()
-{
-    await Promise.all([
-    task("A",2000),
-    task("B",1000),
-    task("C",500)
-]);
-}
-test();
+//Example 15
 
- 
+const c1 = Promise.resolve("Task 1 complete");
+const c2 = Promise.reject("Task 2 failed drastically!");
+const c3 = Promise.resolve("Task 3 complete");
+
+Promise.all([c1, c2, c3])
+  .then((results) => {
+
+    console.log("Success:", results);   // This code will NOT run because p2 rejected
+  })
+  .catch((error) => {
+     console.error("Failure:", error);
+    
+  });
+
+  //promise.race()-returns a promise that settles (either fulfills or rejects) as soon as the very first promise in the iterable settles.
+  // If the fastest promise happens to reject, the entire Promise.race() rejects immediately with that error reason
+
+const pr1 = new Promise((resolve) => 
+  setTimeout(() => resolve("Promise 1 resolved (1000ms)"), 1000)
+);
+
+const pr2 = new Promise((_, reject) => 
+  setTimeout(() => reject(new Error("Promise 2 rejected (500ms)")), 500) //If it 2000 then output will Promise3 fulfilled
+);
+
+const pr3 = new Promise((resolve) => 
+  setTimeout(() => resolve("Promise 3 resolved (800ms)"), 800)
+);
+
+// Racing them together
+Promise.race([pr1, pr2, pr3])
+  .then((value) => {
+    console.log("Fulfilled with:", value);
+  })
+  .catch((error) => {
+    console.error("Race rejected! Error:", error.message);
+  }); //As promise2 is the fastest time so entire Promise.race() rejects immediately with that error reason
+
+  //Example 16
+
+const r1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 600, "one");
+});
+
+const r2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 200, "two");
+});
+
+Promise.race([r1, r2]).then((value) => {
+    console.log(value);
+});// r2 i.e two

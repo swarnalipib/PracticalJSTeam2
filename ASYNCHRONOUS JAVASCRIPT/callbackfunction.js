@@ -216,3 +216,65 @@ let evenNum = numbers2.filter(function(num){
 })
 ;
 console.log(evenNum);
+
+//callback hell -callbacks are nested inside callbacks creating a pyramid of doom
+
+//the reason for which callback is not used 
+//Difficult to read
+//difficult debugging
+//difficult error handling
+//difficult maiantenance
+
+
+//Example -
+
+function first(callback)
+{
+    setTimeout(() => {
+        console.log("First task completed")
+    },1000);
+}
+
+function second(callback)
+{
+    setTimeout(() => {
+        console.log("Second task completed")
+    },1000);
+}
+
+function third(callback)
+{
+    setTimeout(() => {
+        console.log("Third task completed")
+    },1000);
+}
+
+first(() => {
+    second(() =>{
+        third(() =>{
+            console.log("All task completed");
+        });
+    });
+});
+
+//or same can be written in await promise - it avoids deep nesting with callback hell
+
+function task(message)
+{
+    return new Promise((resolve) => {
+        setTimeout(() => {
+        console.log(message)
+    },1000);
+    });
+}
+
+async function runtask() 
+{
+    await task("first task completed");
+    await task("second task completed");
+    await task("third task completed");
+
+    console.log("All task completed");
+}
+
+runtask();
