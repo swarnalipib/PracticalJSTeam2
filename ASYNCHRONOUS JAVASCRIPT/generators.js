@@ -109,7 +109,7 @@ function* generator2(i) {
   yield i+1;
   yield i + 10;
 }
-generator2();
+
 }
 
 const g3 = generator1(10);
@@ -208,7 +208,7 @@ for (let y of vowels(str1))
 
 console.log("Total vowels:",count);
 
-//Example 12 Converting uppercase to lowercase using generator 
+//Example 12 Converting lowercase to uppercase using generator 
 
 function* convertupper(str)
 {

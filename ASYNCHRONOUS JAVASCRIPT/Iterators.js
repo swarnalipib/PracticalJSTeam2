@@ -57,7 +57,7 @@ let result = iterator.next();
 while(!result.done) //until array have elements lefts to loop and once reached then stop and exit
 {
     console.log(result.value);
-    result = iterator.next()
+     result = iterator.next()
 }
 
 //Example 4 set iterator 
@@ -105,8 +105,8 @@ const myObject = {
     let index = 0;
     return {
       next: () => {
-        if (index < this.values.length) {
-          return { value: this.values[index++], done: false };
+        if (index < this.values.length) {  //this is pointed to myobject and access values (0<3)
+          return { value: this.values[index++], done: false }; //Here next return 2 properties value and done. iteration 1... when index is 0 the it return value :10,done:false
         } else {
           return { done: true };
         }
