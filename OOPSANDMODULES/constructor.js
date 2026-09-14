@@ -27,9 +27,9 @@ class student
 {
     constructor()
         {
-    this.name ="rahul";
-    this.age= 20;
-        }
+    name ="rahul";
+    age= 20;
+      }
     
            display()
 {
@@ -39,6 +39,23 @@ class student
 
 let s =new  student();
 s.display();
+
+//Empty constructor - No constructor declared
+
+class student 
+{
+    
+    name ="rahul";
+    age= 20;
+    
+           display()
+{
+    console.log(this.name,this.age);
+}
+}
+
+let ss1 =new  student();
+s11.display();
 
 //Example -Parameterized constructor  a special method used to initialize an object with dynamic, user-provided values at the moment the object is created. 
 //a parameterized constructor accepts parameters, allowing you to create multiple distinct objects using the same blueprint

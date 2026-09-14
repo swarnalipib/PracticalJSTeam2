@@ -6,30 +6,35 @@
 
 class students
 {
-    constructor() //We cannot directly access the variables
+
+#name;
+#marks;
+
+    constructor(name,marks) //We cannot directly access the variables
 {
-let name,marks;
+this.#name=name;
+this.#marks=marks
 }
 
 getName()
 {
-    return this.name; // return the value as name
+    return this.#name; // return the value as name
 }
 
 setName(name)
 {
-this.name=name;  //name will passed as argument and assign  the name value to the variable name.
+this.#name=name;  //name will passed as argument and assign  the name value to the variable name.
 
 }
 
 getMarks()
 {
-    return this.marks;
+    return this.#marks;
 }
 
 setMarks(marks)
 {
-    this.marks=marks;
+    this.#marks=marks;
 }
 }
 

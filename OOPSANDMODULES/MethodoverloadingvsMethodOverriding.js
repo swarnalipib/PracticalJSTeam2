@@ -4,18 +4,21 @@
 //Example -
 
 class Calculator {
-  add(a, b) {
-    if (b === undefined) {
-      return a + 10;
-    }
-    return a + b;
+  add(a, b,c) {
+  
+    return a + b+c;
+
   }
+
+  add(a,b) {
+   return a*b;
+  } 
 }
 
 const calc = new Calculator();
 
-console.log(calc.add(5));      // 15
-console.log(calc.add(5, 10));  // 15
+console.log(calc.add(5,10,5));  // 15
+console.log(calc.add(3,2));      // 5
 
 //Method overriding -Overriding happens when a child class provides its own implementation of a method that already exists in the parent class.
 
