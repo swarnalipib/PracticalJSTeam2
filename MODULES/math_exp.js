@@ -35,7 +35,7 @@ class Student {
     }
 }
 
-//export default Student;
+export default Student;
 
 //Export variables
 
@@ -51,4 +51,4 @@ const student1 = {
     marks: 85
 };
 
-export default student1;
+//export default student1;

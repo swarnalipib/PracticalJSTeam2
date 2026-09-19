@@ -11,7 +11,7 @@ console.log(result1);
 import {mul as multiply} from './math_exp.js';
 console.log(multiply(3,4));
 
-//Default Export and import
+//Default Export and import - one module can have 1 default and it doesn't curly braces and we can rename the name
 // import greet from './math_exp.js';
 // console.log(greet("swarna"));
 

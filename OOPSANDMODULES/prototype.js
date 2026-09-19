@@ -32,9 +32,7 @@ class employee
                                 console.log(this.eid,this.ename,this.esalary);    
                                 }
     empj=new employee(34,"john");
-
-    //console.log(empj.eid,empj.ename,empj.esalary); //inplace of using console of this using function to display
     empj.display();
     empj2=new employee(35,"swarna");
     empj2.display();
-   // console.log(empj2.eid,empj2.ename,empj2.esalary);
+
