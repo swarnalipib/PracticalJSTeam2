@@ -12,6 +12,8 @@ id="twotabsearchtextbox"
 name="field-keywords"
 placeholder="Search Amazon.in"
 
+<input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="Search Amazon.in" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search Amazon.in" role="searchbox" aria-autocomplete="list" aria-controls="sac-autocomplete-results-container" aria-expanded="true" aria-haspopup="grid" spellcheck="false">
+#twotabsearchtextbox
 
 CSS Locator : input[id="tnb-google-search-input"]
 
@@ -20,6 +22,7 @@ CSS Locator : input[id="tnb-google-search-input"]
 input
 #nav-search-bar-form input
 
+<input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="Search Amazon.in" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search Amazon.in" role="searchbox" aria-autocomplete="list" aria-controls="sac-autocomplete-results-container" aria-expanded="true" aria-haspopup="grid" spellcheck="false">
 
 3.Class Selector (.): Applies styles to elements with a specific class attribute. 
 
@@ -27,6 +30,10 @@ class="nav-input nav-progressive-attribute"
 
 <input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="Search Amazon.in" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search Amazon.in" role="searchbox" aria-autocomplete="list" aria-controls="sac-autocomplete-results-container" aria-expanded="true" aria-haspopup="grid" spellcheck="false">
 
+.nav-input
+<input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="Search Amazon.in" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search Amazon.in" role="searchbox" aria-autocomplete="list" aria-controls="sac-autocomplete-results-container" aria-expanded="true" aria-haspopup="grid" spellcheck="false">
+
+.nav-input.nav-progressive-attribute
 class="nav-progressive-attribute"
 <input id="glowValidationToken" name="glow-validation-token" type="hidden" value="hBuU4y/Neh9MVZrJlJ1ojSxAre+LKpikRHZwdJnPhoxFAAAAAGquha8AAAAB" class="nav-progressive-attribute">
 
@@ -69,6 +76,12 @@ input[name*="destination"]
 input[name*="ubb"]
 
 <input data-addnewaddress="add-new" id="ubbShipTo" name="dropdown-selection-ubb" type="hidden" value="add-new" class="nav-progressive-attribute">
+
+8.[attribute|="value"] -Exactly value, or starts with value followed by a hyphen -
+Targeting specific language variations.
+
+[lang|="en"] 
+
 
 9.Multiple attributes
 

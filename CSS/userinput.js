@@ -5,8 +5,8 @@ website used :https://www.instagram.com/
 
 input[id=_R_33d9lplcldcpbn6b5ipamH1_]
 input[type="password"]
-input[name="pass"]
-input[name="pa"]
+input[name*="pass"]
+input[name=${pa}]
 input[name="pass12"]
 input[name="email"]
 input[name="ema"]
@@ -16,7 +16,12 @@ input[id="_R_33d9lplcldcpbn6b5ipamH1_"]
 
 
 
+f//click(pa){
 
+input[name=${pa}];
+}
+
+click("Pass");
 
 
 

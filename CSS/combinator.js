@@ -2,10 +2,14 @@
 CSS combinator  -CSS combinators define the relationship between two selectors.
 Combinators are especially useful when you want to locate an element based on its relationship with another element.
 
-1,Descendant combinator — space
+1.Descendant combinator — space
+--------------------------------
 
 The descendant selector It is created by simply separating two selectors with a single space.
 Matches all elements that are descendants (children, grandchildren, etc.) of a specified parent element.
+
+Element:Search box
+CSS Locator :
 
 form input
 
@@ -21,6 +25,10 @@ form [role="searchbox"]
 
 
 2.Child Combinator (>) Selects only elements that are the immediate, direct children of a specified parent element.
+-----------------------
+
+Element:Search box
+CSS Locator :
 
 .nav-search-field > input
 Find input that is a direct child of .nav-search-field.
@@ -30,7 +38,13 @@ Find input that is a direct child of .nav-search-field.
 .nav-search-submit-text > input
 <input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Go" tabindex="0">
 
-3.Adjacent Sibling selector(+) -The adjacent sibling selector selects an element that is immediately next to a specified element. This selector selects only the next sibling.
+3.Adjacent Sibling selector(+) -
+------------------------------------
+The adjacent sibling selector selects an element that is immediately next to a specified element. This selector selects only the next sibling.
+
+
+Element:Search box
+CSS Locator :
 
 input + input
 
@@ -43,16 +57,16 @@ It finds .nav-search-field only if it is the very next sibling right after .nav-
 
 
 4.General Sibling Combinator (~)
+------------------------------------
 Finds input elements that occur after another input at the same parent level.
 
+Element:Search box
+CSS Locator :
+input~input
 
+<input data-addnewaddress="add-new" id="ubbShipTo" name="dropdown-selection-ubb" type="hidden" value="add-new" class="nav-progressive-attribute">
+<input id="glowValidationToken" name="glow-validation-token" type="hidden" value="hLTmoEEjU5C5sXi8a76sPcPmIubX9NrI1zQ2HR5uwIA2AAAAAGqwI1QAAAAB" class="nav-progressive-attribute">
 
-
-
-
-
-
-
-
+div~input
 
 */
